@@ -34,6 +34,7 @@ public class ExtendedFlycam : MonoBehaviour
 	{
 		//Screen.lockCursor = true;
 		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
  
 	void Update ()
@@ -68,7 +69,15 @@ public class ExtendedFlycam : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.End))
 		{
 			//Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
-			Cursor.lockState = (Cursor.lockState.Equals(CursorLockMode.None)) ? CursorLockMode.Locked : CursorLockMode.None;
+			//Cursor.lockState = (Cursor.lockState.Equals(CursorLockMode.None)) ? CursorLockMode.Locked : CursorLockMode.None;
+			if(Cursor.lockState.Equals(CursorLockMode.None)){
+				Cursor.lockState = CursorLockMode.Locked;
+				Cursor.visible = false;
+			}
+			else{
+				Cursor.lockState = CursorLockMode.None;
+				Cursor.visible = true;
+			}
 		}
 	}
 }
