@@ -350,4 +350,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.01
-  separationFactor: 0
+  separationFactor: 1
