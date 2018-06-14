@@ -6,21 +6,19 @@ public class DisassembleObject : MonoBehaviour {
 	/*
 	FEATURES
 		Buttons:	    Action:
-		 Space:			 Start movement
-		 P:		  		 Pause movement
-		 K:    			 Disassemble object
-		 L:	     		 Assemble object
+		 R:			 	 Start/Pause movement
+		 Space:    		 Assemble/Disassemble mode
 	*/
 
 	// Use this for initialization
-	public float velocity = 0.001f; 
-	public float separationFactor = 1;
+	public float velocity = 0.01f; 
+	public float separationFactor = 2;
 
 	private Vector3 centro;
 	private struct objectMovementData{
-		public Vector3 posFin; 
+		public Vector3 posIni, posFin; 
 		public Vector3 vPaso; //Vector que contiene la direccion y el paso de avance
-		public float distancia; //Desde el centro hasta la posFin
+		public float distancia; //Distancia entre posIni y posFin
 		public Transform t; 
 	}
 	private List<objectMovementData> listaObjetos = new List<objectMovementData>(); 
@@ -28,35 +26,47 @@ public class DisassembleObject : MonoBehaviour {
 	private static bool pause = true;
 
 	void Start () {
-		//Para varios objetos que vi, la posIni(transform.position) de cada sub objeto es la misma
-		// que la del padre (centro). No se si se cumple para todos los objetos. Este algoritmo funciona
-		// teniendo en cuenta lo anterior. Cada sub objeto se desplaza desde el "centro" hasta el centro del 
-		// bounding box de cada sub objeto (posFin) con un determinado paso. La posFin puede ser ajustada 
-		// con "separationFactor" y el paso con "velocity".
+		// Cada sub objeto se desplaza desde su posIni hasta una posFin con un determinado paso.
+		// Dicha posFin se encuetra sobre la recta que se forma entre el 'centro' y posIni. 
+		// La posFin puede ser ajustada con "separationFactor" y el paso con "velocity".
 
-		//Centro del objeto en coordenadas del mundo.  
+		//Para poder ver ambos lados de cada mesh.
+		Utils.TwoSideSurface(this.gameObject);
+
+		//Centro del objeto en coordenadas del mundo. 
+		//Se puede mejorar calculando el centro del objeto. 
 		centro = this.transform.position;
+
 		//Arreglo con la componente Renderer de todos los sub objetos que van a ser renderizados.
+		//Es decir, todos los hijos hoja del objeto.
 		Renderer[] array = this.gameObject.GetComponentsInChildren<Renderer>(); 
 		
 		foreach(Renderer r in array){
 			objectMovementData omd = new objectMovementData();
-			omd.posFin = r.bounds.center; //Centro del boundig box del sub objeto
-			omd.posFin = centro + (omd.posFin - centro) * separationFactor;
-			omd.distancia = Vector3.Magnitude(omd.posFin-centro);
-			omd.vPaso = (omd.posFin - centro) * velocity; //Todos los sub objetos llegan al punto final al mismo tiempo. 
 			omd.t = r.GetComponent<Transform>();
+			omd.posIni = omd.t.position;
+			
+			//posFin depende de si posIni coincide con el 'centro'.
+			if(Vector3.Magnitude(omd.t.position-centro) < 0.001f){
+				omd.posFin = r.bounds.center; //Centro del boundig box del sub objeto
+			}
+			else{
+				omd.posFin = omd.t.position; 
+			}
+			//posFin segun el separationFactor 
+			omd.posFin = centro + (omd.posFin - centro) * separationFactor;
+			//vPaso para que todos los sub objetos llegen al punto final al mismo tiempo. 
+			omd.vPaso = (omd.posFin - centro) * velocity;
+			omd.distancia = Vector3.Magnitude(omd.posFin - omd.posIni);
 			listaObjetos.Add(omd);
 		}
 	}
 	
 	// FixedUpdate is called every fixed framerate frame.
 	void FixedUpdate () {
-		if(Input.GetKey(KeyCode.Space)){ pause = false; }
-		if(Input.GetKey(KeyCode.P)){ pause = true; }
+		if(Input.GetKeyDown(KeyCode.R)){ pause = !pause; }
 		if(!pause){
-			if(Input.GetKey(KeyCode.K)){ armar = true; }
-			if(Input.GetKey(KeyCode.L)){ armar = false; }
+			if(Input.GetKeyDown(KeyCode.Space)){ armar = !armar; }
 			foreach(objectMovementData omd in listaObjetos){
 				if(armar){
 					if(Vector3.Magnitude(omd.posFin-omd.t.position) < omd.distancia){	
@@ -64,37 +74,12 @@ public class DisassembleObject : MonoBehaviour {
 					}
 				}
 				else{ //Desarmar
-					if(Vector3.Magnitude(omd.posFin-omd.t.position) > 0.5f){	
+					if(Vector3.Magnitude(omd.posIni-omd.t.position) < omd.distancia){	
 						omd.t.position += omd.vPaso;
 					}
 				}
 			}
 		}		
-	}
-
-	//Funciones auxiliares
-	private Vector3 CartesianToSpherical(Vector3 cartCoords){
-		Vector3 sphericals = new Vector3(); //(r,thita,phi) thita[0,2PI] y phi[0,PI]
-    	if (cartCoords.x == 0f)
-        	cartCoords.x = Mathf.Epsilon; //Valor muy chiquito cercano a 0
-		
-		sphericals.x = Mathf.Sqrt((cartCoords.x * cartCoords.x)
-						+ (cartCoords.y * cartCoords.y)
-						+ (cartCoords.z * cartCoords.z));
-		sphericals.y = Mathf.Atan(cartCoords.z / cartCoords.x);
-		if (cartCoords.x < 0)
-			sphericals.y += Mathf.PI;
-		sphericals.z = Mathf.Acos(cartCoords.y / sphericals.x);
-		return sphericals;
-	}
-
-	private Vector3 sphericalToCartesian(Vector3 sphCoords){
-		Vector3 cartesians = new Vector3(); 
-    	float aux = Mathf.Sin(sphCoords.z);
-		cartesians.x= sphCoords.x * aux * Mathf.Cos(sphCoords.y);
-		cartesians.y= sphCoords.x * Mathf.Cos(sphCoords.z);
-		cartesians.z= sphCoords.x * aux * Mathf.Sin(sphCoords.y);
-		return cartesians;
 	}
 
 }
