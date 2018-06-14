@@ -35,6 +35,12 @@ public class ExtendedFlycam : MonoBehaviour
 		//Screen.lockCursor = true;
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+
+		//Correccion para que la posicion inicial sea la misma que la camara.
+		//RotationX: El desplazamiento del mouse sobre el eje X hace girar la camara con respecto a su eje Y.
+		//RotationY: El desplazamiento del mouse sobre el eje Y hace girar la camara con respecto a su eje X.
+		rotationX = this.transform.localRotation.eulerAngles.y; 
+		rotationY = (-1)*this.transform.localRotation.eulerAngles.x;
 	}
  
 	void Update ()
@@ -42,7 +48,7 @@ public class ExtendedFlycam : MonoBehaviour
 		rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
 		rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
 		rotationY = Mathf.Clamp (rotationY, -90, 90);
- 
+
 		transform.localRotation = Quaternion.AngleAxis(rotationX, Vector3.up);
 		transform.localRotation *= Quaternion.AngleAxis(rotationY, Vector3.left);
  
@@ -61,7 +67,6 @@ public class ExtendedFlycam : MonoBehaviour
 	 		transform.position += transform.forward * normalMoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
 			transform.position += transform.right * normalMoveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime;
 	 	}
- 
  
 		if (Input.GetKey (KeyCode.Q)) {transform.position += transform.up * climbSpeed * Time.deltaTime;}
 		if (Input.GetKey (KeyCode.E)) {transform.position -= transform.up * climbSpeed * Time.deltaTime;}
