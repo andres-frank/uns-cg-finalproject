@@ -988,7 +988,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 1.5, z: -8.02}
+  m_LocalPosition: {x: 0.29, y: 3, z: -8.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2521,7 +2521,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 803642246}
-  - component: {fileID: 803642247}
   - component: {fileID: 803642245}
   m_Layer: 0
   m_Name: F-15C_Eagle
@@ -2538,7 +2537,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 803642244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afb22c87899e4c43a0a6b6d244e480a, type: 3}
+  m_Script: {fileID: 11500000, guid: cdd4568b106274940809d2ffdc0a63dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.01
@@ -2565,17 +2564,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
---- !u!114 &803642247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803642244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0341ff59344ac6d429dc0990bc8045f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &825442864
 GameObject:
   m_ObjectHideFlags: 0
