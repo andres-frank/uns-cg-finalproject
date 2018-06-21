@@ -25,6 +25,8 @@ public class DisassembleObject : MonoBehaviour {
 	private static bool armar = false;
 	private static bool pause = true;
 
+	public bool isEnabled = false;
+
 	void Start () {
 		// Cada sub objeto se desplaza desde su posIni hasta una posFin con un determinado paso.
 		// Dicha posFin se encuetra sobre la recta que se forma entre el 'centro' y posIni. 
@@ -64,9 +66,12 @@ public class DisassembleObject : MonoBehaviour {
 	
 	// FixedUpdate is called every fixed framerate frame.
 	void FixedUpdate () {
-		if(Input.GetKeyDown(KeyCode.R)){ pause = !pause; }
+
+		if (!isEnabled) return;
+
+		// if(Input.GetKeyDown(KeyCode.R)){ pause = !pause; }
 		if(!pause){
-			if(Input.GetKeyDown(KeyCode.Space)){ armar = !armar; }
+			// if(Input.GetKeyDown(KeyCode.Space)){ armar = !armar; }
 			foreach(objectMovementData omd in listaObjetos){
 				if(armar){
 					if(Vector3.Magnitude(omd.posFin-omd.t.position) < omd.distancia){	
@@ -80,6 +85,22 @@ public class DisassembleObject : MonoBehaviour {
 				}
 			}
 		}		
+	}
+
+	public void togglePause(){
+		pause = !pause;
+	}
+
+	public void toggleArmar(){
+		armar = !armar;
+	}
+
+	public void Enable(){
+		isEnabled = true;
+	}
+
+	public void Disable(){
+		isEnabled = false;
 	}
 
 }
