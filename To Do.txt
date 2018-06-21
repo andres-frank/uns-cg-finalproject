@@ -1,0 +1,17 @@
+Funciones basicas:
+
+- Shaders: para el cuerpo del objeto y para el vidrio
+- sombras
+- Puesta en escena: skybox (cube map)
+- Interactividad: seleccion de piezas, se centra la camara y muestra informacion (position, nombre, etc.)
+- 
+
+
+Ideas para expansion:
+
+- Seleccion multiples modelos (tanque, avion, arma)
+- sistema particulas para simular el fuego del propulsor
+- Nubes (niebla)
+- simular el paso del tiempo (dia y noche)
+- lucecitas en la cola del avion (solo de noche?) luz en la cabina?
+- lens flare
