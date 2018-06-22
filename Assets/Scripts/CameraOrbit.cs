@@ -58,6 +58,7 @@ public class CameraOrbit : MonoBehaviour
  		//Clamp the y Rotation to horizon and not flipping over at the top
  		_LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
 
+
         //Actual Camera Rig Transformations
         Quaternion QT = Quaternion.Euler(_LocalRotation.y, _LocalRotation.x, 0);
         this._XForm_Parent.rotation = Quaternion.Lerp(this._XForm_Parent.rotation, QT, Time.deltaTime * OrbitDampening);

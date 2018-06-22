@@ -13,19 +13,7 @@ public class Transition : MonoBehaviour {
 		newPos = transform.position;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
-		// if (Input.GetKeyDown(KeyCode.Alpha1)) {
-		// 	ActiveModel = Model1;
-		// 	Model1.GetComponent<DisassembleObject>().Enable();
-		// 	// Model2.GetComponent<DisassembleObject>().Disable();
-		// }
-		// if (Input.GetKeyDown(KeyCode.Alpha2)) {
-		// 	ActiveModel = Model2;
-		// 	// Model2.GetComponent<DisassembleObject>().Enable();
-		// 	// Model1.GetComponent<DisassembleObject>().Disable();
-		// }
 		
 	}
 

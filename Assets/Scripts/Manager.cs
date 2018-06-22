@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
+	public Canvas canvas;
 	public Transform[] Models;
 	
 	private Transform ActiveModel;
@@ -14,11 +16,14 @@ public class Manager : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 		if(Input.GetKeyDown(KeyCode.P)){
 			ActiveModel.GetComponent<DisassembleObject>().togglePause();
+		}
+
+		if(Input.GetKeyDown(KeyCode.H)){
+			canvas.GetComponent<ManagerUI>().ToggleHelpMenu();
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space)){ 
