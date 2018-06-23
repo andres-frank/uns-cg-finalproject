@@ -6,7 +6,7 @@ public class DisassembleObject : MonoBehaviour {
 	/*
 	FEATURES
 		Buttons:	    Action:
-		 R:			 	 Start/Pause movement
+		 P:			 	 Start/Pause movement
 		 Space:    		 Assemble/Disassemble mode
 	*/
 
@@ -22,8 +22,8 @@ public class DisassembleObject : MonoBehaviour {
 		public Transform t; 
 	}
 	private List<objectMovementData> listaObjetos = new List<objectMovementData>(); 
-	private static bool armar = false;
-	private static bool pause = true;
+	private bool armar = true;
+	private static bool pause = false;
 
 	public bool isEnabled = false;
 
@@ -74,8 +74,12 @@ public class DisassembleObject : MonoBehaviour {
 			// if(Input.GetKeyDown(KeyCode.Space)){ armar = !armar; }
 			foreach(objectMovementData omd in listaObjetos){
 				if(armar){
-					if(Vector3.Magnitude(omd.posFin-omd.t.position) < omd.distancia){	
-						omd.t.position -= omd.vPaso;
+					if(Vector3.Magnitude(omd.posFin-omd.t.position) < omd.distancia){
+						if(Vector3.Magnitude(omd.posFin-(omd.t.position-omd.vPaso)) > omd.distancia){
+							omd.t.position = omd.posIni;
+						}
+						else
+							omd.t.position -= omd.vPaso;
 					}
 				}
 				else{ //Desarmar
