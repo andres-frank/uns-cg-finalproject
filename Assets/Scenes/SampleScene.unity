@@ -639,9 +639,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1024, y: 768}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -790,10 +790,10 @@ RectTransform:
   m_Father: {fileID: 961207173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.637, y: 0.5123545}
-  m_AnchorMax: {x: 0.9428256, y: 0.88253134}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -357, y: -308}
+  m_SizeDelta: {x: 466, y: 286}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104850725
 MonoBehaviour:
@@ -880,10 +880,10 @@ RectTransform:
   m_Father: {fileID: 961207173}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.78727347, y: 0.05385634}
-  m_AnchorMax: {x: 0.975, y: 0.10828732}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -228, y: 87.5}
+  m_SizeDelta: {x: 360, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365016782
 MonoBehaviour:
@@ -906,7 +906,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6d2e958d7829374448a0abbc88c9f3c6, type: 3}
-    m_FontSize: 14
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1090,10 +1090,10 @@ RectTransform:
   m_Father: {fileID: 1104850724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19.3, y: -18.7}
-  m_SizeDelta: {x: 280.22, y: 163.75}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -201.85, y: 109.3}
+  m_SizeDelta: {x: 403.7, y: 218.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1892611570
 MonoBehaviour:
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1116,7 +1116,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee51b877b92ecd748b24d4791068d28b, type: 3}
-    m_FontSize: 16
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.03
   m_Text: "<b>Space</b> \tArm/Disarm selected model\n<b>P</b>\t\t\t\tPause/Resume
     animation\n<b>R</b>\t\t\t\tEnable/Disable camera rotation\n<b>H</b>\t\t\t\tShow/Hide
     this help\n\n<b>1</b>\t\t\t\tSelect model 1\n<b>2</b>\t\t\t\tSelect model 2\n<b>3</b>\t\t\t\tSelect
