@@ -31,8 +31,6 @@ public class CameraOrbit : MonoBehaviour
  
  
     void LateUpdate() {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-             AutoRotation = !AutoRotation;
  
  		if (AutoRotation) {
  			_LocalRotation.x += Time.deltaTime + AutoRotateX;
@@ -67,5 +65,9 @@ public class CameraOrbit : MonoBehaviour
         {
             this._XForm_Camera.localPosition = new Vector3(0f, 0f, Mathf.Lerp(this._XForm_Camera.localPosition.z, this._CameraDistance * -1f, Time.deltaTime * ScrollDampening));
         }
+    }
+
+    public void toggleAutoRotation() {
+        this.AutoRotation = !AutoRotation;
     }
 }

@@ -18,15 +18,19 @@ public class Manager : MonoBehaviour {
 	
 	void Update () {
 		
-		if(Input.GetKeyDown(KeyCode.P)){
+		if (Input.GetKeyDown(KeyCode.P)) {
 			ActiveModel.GetComponent<DisassembleObject>().togglePause();
 		}
 
-		if(Input.GetKeyDown(KeyCode.H)){
+		if (Input.GetKeyDown(KeyCode.R)) {
+			FindObjectOfType<CameraOrbit>().toggleAutoRotation();
+		}
+
+		if (Input.GetKeyDown(KeyCode.H)){
 			canvas.GetComponent<ManagerUI>().ToggleHelpMenu();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space)){ 
+		if (Input.GetKeyDown(KeyCode.Space)) { 
 			ActiveModel.GetComponent<DisassembleObject>().toggleArmar();
 		}
 
