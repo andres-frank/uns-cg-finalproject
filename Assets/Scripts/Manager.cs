@@ -7,13 +7,10 @@ public class Manager : MonoBehaviour {
 	public Transform[] Models;
 	
 	private Transform ActiveModel;
-	private Transform NewActiveModel;
 
-	// Use this for initialization
 	void Start () {
 		ActiveModel = Models[0];
 		ActiveModel.GetComponent<DisassembleObject>().Enable();
-
 	}
 	
 	void Update () {
@@ -35,28 +32,24 @@ public class Manager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
-			NewActiveModel = Models[0];
-			setActive();
+			this.setActive(Models[0]);
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha2)) {
-			NewActiveModel = Models[1];
-			setActive();
+			this.setActive(Models[1]);
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha3)) {
-			NewActiveModel = Models[2];
-			setActive();
+			this.setActive(Models[2]);
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha4)) {
-			NewActiveModel = Models[3];
-			setActive();
+			this.setActive(Models[3]);
 		}
 
 	}
 
-	private void setActive(){
+	private void setActive(Transform NewActiveModel){
 		
 		ActiveModel.GetComponent<DisassembleObject>().Disable();
 		ActiveModel = NewActiveModel;
