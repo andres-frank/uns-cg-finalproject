@@ -1,4 +1,6 @@
-Funciones basicas:
+
+__________________________________________
+# Funciones basicas
 
 - Shaders: para el cuerpo del objeto y para el vidrio
 - sombras
@@ -6,8 +8,8 @@ Funciones basicas:
 - Interactividad: seleccion de piezas, se centra la camara y muestra informacion (position, nombre, etc.)
 - 
 
-
-Ideas para expansion:
+__________________________________________
+# Ideas para expansion
 
 - Seleccion multiples modelos (tanque, avion, arma)
 - sistema particulas para simular el fuego del propulsor
@@ -15,3 +17,8 @@ Ideas para expansion:
 - simular el paso del tiempo (dia y noche)
 - lucecitas en la cola del avion (solo de noche?) luz en la cabina?
 - lens flare
+
+__________________________________________
+# To Do
+
+-

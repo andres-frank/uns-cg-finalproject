@@ -3,23 +3,15 @@ using UnityEngine;
 
 public class ManagerUI : MonoBehaviour {
 
-	private GameObject[] helpMenuObjects;
+	private GameObject helpMenuPanel;
 
-	// Use this for initialization
 	void Start () {
-	    helpMenuObjects = GameObject.FindGameObjectsWithTag("HelpMenu");
+	    helpMenuPanel = GameObject.Find("HelpPanel");
 		ToggleHelpMenu();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	public void ToggleHelpMenu(){
-		foreach (GameObject helpMenuObject in helpMenuObjects) {
-		    helpMenuObject.SetActive(!helpMenuObject.activeSelf);
-		}
+		helpMenuPanel.SetActive(!helpMenuPanel.activeSelf);
 	}
 
 }
