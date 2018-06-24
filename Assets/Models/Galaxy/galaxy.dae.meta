@@ -1358,6 +1358,256 @@ ModelImporter:
     4300494: body_rear
     4300496: rear_fin
     4300498: fin_blades
+    6400000: Body_Front
+    6400002: Body_Front.1
+    6400004: body_middle
+    6400006: body_rear
+    6400008: body_top
+    6400010: Cover_1
+    6400012: Cover_10
+    6400014: cover_10
+    6400016: cover_11
+    6400018: cover_11 1
+    6400020: cover_12
+    6400022: cover_12 1
+    6400024: Cover_13
+    6400026: cover_13
+    6400028: cover_14
+    6400030: cover_14 1
+    6400032: cover_15
+    6400034: cover_16
+    6400036: cover_17
+    6400038: Cover_1_Inner
+    6400040: Cover_1_Outer
+    6400042: Cover_2
+    6400044: Cover_2_Inner
+    6400046: Cover_2_Outer
+    6400048: Cover_3
+    6400050: Cover_3 1
+    6400052: Cover_4
+    6400054: cover_4
+    6400056: Cover_5
+    6400058: cover_5
+    6400060: Cover_6
+    6400062: cover_6
+    6400064: Cover_7
+    6400066: cover_7
+    6400068: Cover_8
+    6400070: cover_8
+    6400072: Cover_9
+    6400074: cover_9
+    6400076: Engine_Blade_1
+    6400078: Engine_Blade_1 1
+    6400080: engine_blade_2
+    6400082: engine_blade_2 1
+    6400084: engine_blade_3
+    6400086: engine_blade_3 1
+    6400088: engine_blade_4
+    6400090: engine_blade_4 1
+    6400092: engine_blade_5
+    6400094: engine_blade_5 1
+    6400096: engine_blade_6
+    6400098: engine_blade_6 1
+    6400100: engine_casing_1
+    6400102: engine_casing_10
+    6400104: engine_casing_11
+    6400106: engine_casing_12
+    6400108: engine_casing_13
+    6400110: engine_casing_14
+    6400112: engine_casing_15
+    6400114: engine_casing_2
+    6400116: engine_casing_3
+    6400118: engine_casing_4
+    6400120: engine_casing_5
+    6400122: engine_casing_6
+    6400124: engine_casing_7
+    6400126: engine_casing_8
+    6400128: engine_casing_9
+    6400130: fin_blades
+    6400132: Fin_Flap
+    6400134: Front_Cargo_Door_Inner
+    6400136: Front_Cargo_door_out
+    6400138: Front_Cover_Inner_LH
+    6400140: Front_Cover_Inner_LH_2
+    6400142: Front_cover_inner_RH_2
+    6400144: Front_cover_inner_rh_2
+    6400146: Front_Cover_Outer_LH
+    6400148: Front_Cover_Outer_LH_2
+    6400150: Front_Cover_Outer_RH
+    6400152: Front_Cover_Outer_RH_2
+    6400154: Front_Ramp_1
+    6400156: Front_Ramp_2
+    6400158: Front_Ramp_Hydraulics_1
+    6400160: Front_Ramp_Hydraulics_2
+    6400162: front_ramp_outer
+    6400164: Front_Ramp_Rear_inner
+    6400166: glass
+    6400168: Int_Front_top_Steps_1
+    6400170: Int_Front_Top_Steps_2
+    6400172: Int_Front_Top_Steps_Support
+    6400174: Int_Rear_Top_Steps_1
+    6400176: Int_Rear_Top_Steps_2
+    6400178: Int_Rear_Top_Steps_Support
+    6400180: Interior_1
+    6400182: Interior_Floor_Cabin
+    6400184: Interior_Roof
+    6400186: Landiing_gear_10
+    6400188: Landing_Gear_1
+    6400190: Landing_gear_1
+    6400192: Landing_Gear_1 1
+    6400194: landing_gear_10
+    6400196: landing_gear_11
+    6400198: landing_gear_11 1
+    6400200: landing_gear_12
+    6400202: landing_gear_12 1
+    6400204: landing_gear_13
+    6400206: landing_gear_13 1
+    6400208: landing_gear_14
+    6400210: landing_gear_14 1
+    6400212: landing_gear_15
+    6400214: Landing_Gear_2
+    6400216: Landing_Gear_2 1
+    6400218: Landing_Gear_2 2
+    6400220: Landing_Gear_3
+    6400222: landing_Gear_3
+    6400224: landing_Gear_3 1
+    6400226: Landing_gear_4
+    6400228: landing_gear_4
+    6400230: landing_gear_4 1
+    6400232: Landing_Gear_5
+    6400234: landing_gear_5
+    6400236: landing_gear_5 1
+    6400238: landing_gear_6
+    6400240: landing_gear_6 1
+    6400242: landing_gear_7
+    6400244: landing_gear_7 1
+    6400246: landing_gear_8
+    6400248: landing_gear_8 1
+    6400250: landing_gear_9
+    6400252: landing_gear_9 1
+    6400254: Left_Blade
+    6400256: left_flap_1
+    6400258: left_flap_10
+    6400260: left_flap_11
+    6400262: left_flap_12
+    6400264: left_flap_13
+    6400266: left_flap_14
+    6400268: left_flap_15
+    6400270: left_flap_16
+    6400272: left_flap_17
+    6400274: left_flap_18
+    6400276: left_flap_19
+    6400278: left_flap_2
+    6400280: left_flap_20
+    6400282: left_flap_3
+    6400284: left_flap_4
+    6400286: left_flap_5
+    6400288: left_flap_6
+    6400290: left_flap_7
+    6400292: left_flap_8
+    6400294: left_flap_9
+    6400296: Left_wing_1.1
+    6400298: left_wing_2
+    6400300: LH_Engine_1
+    6400302: LH_Engine_Casing_1
+    6400304: Lh_Engine_casing_10
+    6400306: lh_engine_casing_11
+    6400308: lh_engine_casing_12
+    6400310: lh_engine_casing_13
+    6400312: lh_engine_casing_14
+    6400314: Lh_Engine_Casing_2
+    6400316: Lh_Engine_Casing_3
+    6400318: LH_Engine_Casing_4
+    6400320: LH_Engine_Casing_5
+    6400322: Lh_Engine_Casing_6
+    6400324: Lh_Engine_Casing_7
+    6400326: Lh_Engine_Casing_8
+    6400328: LH_Engine_Casing_9
+    6400330: lh_Rear_Cargo_Brace_out
+    6400332: lh_Rear_Cargo_Brave_Inner
+    6400334: Main_Landing_Gear
+    6400336: Main_Steps
+    6400338: main_steps
+    6400340: parts_10
+    6400342: parts_3
+    6400344: parts_4
+    6400346: parts_5
+    6400348: parts_6
+    6400350: parts_7
+    6400352: parts_8
+    6400354: parts_9
+    6400356: paryts_2
+    6400358: Rear_Cargo_Door_Inner
+    6400360: Rear_Cargo_Door_out
+    6400362: rear_fin
+    6400364: Rear_Ramp_Guards
+    6400366: Rear_Ramp_Inner_1
+    6400368: Rear_Ramp_Inner_2
+    6400370: Rear_Ramp_Outer
+    6400372: RH_Front_Steps_Door_Inner
+    6400374: RH_Front_Steps_Door_Outer
+    6400376: rh_Rear_Cargo_Brace_Inner
+    6400378: rh_Rear_Cargo_Brace_Out
+    6400380: RH_Rear_Steps_Door_Inner
+    6400382: RH_Rear_Steps_Door_outer
+    6400384: Right_Blade
+    6400386: Right_Flap_1
+    6400388: right_flap_10
+    6400390: right_flap_11
+    6400392: right_flap_12
+    6400394: right_flap_13
+    6400396: right_flap_14
+    6400398: right_flap_15
+    6400400: right_flap_16
+    6400402: right_flap_17
+    6400404: right_flap_18
+    6400406: right_flap_19
+    6400408: right_flap_2
+    6400410: right_flap_20
+    6400412: Right_flap_3
+    6400414: right_flap_4
+    6400416: right_flap_5
+    6400418: right_flap_6
+    6400420: right_flap_7
+    6400422: right_flap_8
+    6400424: right_flap_9
+    6400426: right_wing_part_1
+    6400428: Right_wing_Part_2
+    6400430: Step_Support_1
+    6400432: Step_support_1
+    6400434: step_support_2
+    6400436: step_support_2 1
+    6400438: step_support_3
+    6400440: step_support_3 1
+    6400442: step_support_4
+    6400444: step_support_4 1
+    6400446: step_support_5
+    6400448: step_support_5 1
+    6400450: step_support_6
+    6400452: step_support_6 1
+    6400454: step_support_7
+    6400456: step_support_7 1
+    6400458: Top_Detail_1
+    6400460: Top_Detail_2
+    6400462: Wheels_1
+    6400464: Wheels_1 1
+    6400466: Wheels_1 2
+    6400468: Wheels_2
+    6400470: wheels_2
+    6400472: Wheels_2 1
+    6400474: Wheels_3
+    6400476: wheels_3
+    6400478: Wheels_4
+    6400480: wheels_4
+    6400482: Wheels_5
+    6400484: wheels_5
+    6400486: Wheels_6
+    6400488: wheels_6
+    6400490: Wheels_7
+    6400492: wheels_7
+    6400494: Wheels_8
+    6400496: wheels_8
+    6400498: wing_left_3
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1391,7 +1641,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

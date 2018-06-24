@@ -8,9 +8,14 @@ public static class Utils{
 		//Como resultado todas las Meshes son visibles de ambos lados (por dentro y por fuera).
 		Renderer[] array = obj.gameObject.GetComponentsInChildren<Renderer>();
 		GameObject aux;
+		MeshCollider mc;
 		foreach(Renderer r in array){
 			aux = GameObject.Instantiate(r.gameObject, r.transform.parent, true);
+			aux.name = r.gameObject.name;
 			invertirNormales(aux);
+			mc = aux.GetComponent<MeshCollider>();
+			//if(mc != null)
+				mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
 		}
 	}
 	

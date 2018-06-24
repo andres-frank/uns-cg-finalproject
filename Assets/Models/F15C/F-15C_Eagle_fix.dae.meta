@@ -563,6 +563,108 @@ ModelImporter:
     4300198: Body_Under_2_005
     4300200: Body_Under_2_006
     4300202: Body_Under_2_007
+    6400000: Body_1
+    6400002: Body_1_001
+    6400004: Body_1_002
+    6400006: Body_1_003
+    6400008: Body_1_004
+    6400010: Body_1_005
+    6400012: Body_1_006
+    6400014: Body_1_007
+    6400016: Body_2
+    6400018: Body_2_001
+    6400020: Body_2_002
+    6400022: Body_3
+    6400024: Body_3_001
+    6400026: Body_Parts_1
+    6400028: Body_Parts_1_001
+    6400030: Body_Under_1
+    6400032: Body_Under_1_001
+    6400034: Body_Under_1_002
+    6400036: Body_Under_1_003
+    6400038: Body_Under_1_004
+    6400040: Body_Under_1_005
+    6400042: Body_Under_1_006
+    6400044: Body_Under_1_007
+    6400046: Body_Under_2
+    6400048: Body_Under_2_001
+    6400050: Body_Under_2_002
+    6400052: Body_Under_2_003
+    6400054: Body_Under_2_004
+    6400056: Body_Under_2_005
+    6400058: Body_Under_2_006
+    6400060: Body_Under_2_007
+    6400062: Bombs
+    6400064: Canopy_Frame
+    6400066: Canopy_Frame_2
+    6400068: Canopy_Part_1
+    6400070: Canopy_Part_2
+    6400072: Cockpit_1
+    6400074: Cockpit_2
+    6400076: Engines_Rear
+    6400078: Front_Wheel
+    6400080: Glass_1
+    6400082: Glass_2
+    6400084: Landing_Flap_Front_inner_2
+    6400086: Landing_Flap_Front_Outer
+    6400088: Landing_Flap_front_outer_2
+    6400090: Landing_Flap_Front_Parts
+    6400092: Landing_Flap_Rear_Left_Inner
+    6400094: Landing_Flap_Rear_Left_Inner_2
+    6400096: Landing_Flap_Rear_Left_Inner_3
+    6400098: Landing_Flap_Rear_Left_outer
+    6400100: Landing_Flap_Rear_Left_Outer_2
+    6400102: Landing_Flap_Rear_Left_Outer_3
+    6400104: Landing_Flap_Rear_Right_Inner
+    6400106: Landing_Flap_Rear_Right_Inner_3
+    6400108: Landing_Flap_Rear_Right_Outer
+    6400110: Landing_Flap_Rear_Right_Outer_2
+    6400112: Landing_Flap_Rear_Right_Outer_3
+    6400114: Landing_Flap_Rer_Right_Inner_2
+    6400116: Landing_Gear_Connecter
+    6400118: Landing_Gear_Front_001
+    6400120: Landing_Gear_Front_2
+    6400122: Landing_Gear_Left_Rear_001
+    6400124: Landing_Gear_Part_1
+    6400126: Landing_Gear_Part_1_001
+    6400128: Landing_Gear_Part_2
+    6400130: Landing_Gear_Part_2_001
+    6400132: Landing_Gear_Part_3
+    6400134: Landing_Gear_part_3
+    6400136: Landing_Gear_Part_4
+    6400138: Landing_Gear_part_5
+    6400140: Landing_Gear_part_6
+    6400142: Landing_Gear_Rear_Right
+    6400144: Landing_Gera_Part1
+    6400146: Landing_Gera_Part_2
+    6400148: Main_Cockpit_body
+    6400150: Main_Wheel
+    6400152: Main_Wheel_Left
+    6400154: Middle_Brake_Flap_Inner
+    6400156: Middle_Brake_Flap_Outer
+    6400158: Middle_Brake_Flap_Part_1
+    6400160: Middle_Brake_Flap_Part_2
+    6400162: Missiles
+    6400164: Missiles_001
+    6400166: Pilot
+    6400168: Rear_Fin_Flap_Left
+    6400170: Rear_Fin_Flap_Right
+    6400172: Rear_Left_Engine_Ring
+    6400174: Rear_Left_Engine_Ring_2
+    6400176: Rear_Left_Wing_Flap_
+    6400178: Rear_Left_Wing_Flap_2
+    6400180: Rear_Left_Wing_Flap_3
+    6400182: Rear_Right_Engiine_ring_
+    6400184: Rear_Right_Engine_ring_2
+    6400186: Rear_Right_Wing_Flap
+    6400188: Rear_Right_Wing_Flap_2
+    6400190: Rear_Right_Wing_Flap_3
+    6400192: Seat_panel
+    6400194: Wheel_Base
+    6400196: Wheel_Connector
+    6400198: Wheel_Mount_Connector
+    6400200: Wheels_Mount
+    6400202: Wings_Main
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -596,7 +698,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

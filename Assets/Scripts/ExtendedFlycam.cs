@@ -32,9 +32,9 @@ public class ExtendedFlycam : MonoBehaviour
  
 	void Start ()
 	{
-		//Screen.lockCursor = true;
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+
+		//Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
 
 		//Correccion para que la posicion inicial sea la misma que la camara.
 		//RotationX: El desplazamiento del mouse sobre el eje X hace girar la camara con respecto a su eje Y.
@@ -71,18 +71,19 @@ public class ExtendedFlycam : MonoBehaviour
 		if (Input.GetKey (KeyCode.Q)) {transform.position += transform.up * climbSpeed * Time.deltaTime;}
 		if (Input.GetKey (KeyCode.E)) {transform.position -= transform.up * climbSpeed * Time.deltaTime;}
  
-		if (Input.GetKeyDown (KeyCode.End))
-		{
-			//Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
-			//Cursor.lockState = (Cursor.lockState.Equals(CursorLockMode.None)) ? CursorLockMode.Locked : CursorLockMode.None;
-			if(Cursor.lockState.Equals(CursorLockMode.None)){
-				Cursor.lockState = CursorLockMode.Locked;
-				Cursor.visible = false;
-			}
-			else{
-				Cursor.lockState = CursorLockMode.None;
-				Cursor.visible = true;
-			}
-		}
+		// Para mostrar/ocultar el cursor
+		// if (Input.GetKeyDown (KeyCode.End))
+		// {
+		// 	//Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+		// 	//Cursor.lockState = (Cursor.lockState.Equals(CursorLockMode.None)) ? CursorLockMode.Locked : CursorLockMode.None;
+		// 	if(Cursor.lockState.Equals(CursorLockMode.None)){
+		// 		Cursor.lockState = CursorLockMode.Locked;
+		// 		Cursor.visible = false;
+		// 	}
+		// 	else{
+		// 		Cursor.lockState = CursorLockMode.None;
+		// 		Cursor.visible = true;
+		// 	}
+		// }
 	}
 }
