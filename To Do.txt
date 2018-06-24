@@ -21,4 +21,25 @@ __________________________________________
 __________________________________________
 # To Do
 
+- ver si se puede arreglar el modelo del hercules
+	+ poner bien el origen
+	+ ver por que se desarma mal todavia (es por el origen?)
+	
 - Arreglar la camara de orbita, anda para el orto
+
+- Agregar luces en la alas del Hercules (azules) y quizas en la cola (violeta/rojo?)
+	+ que se enciendan en tiempos distintos, pero iguales en el objeto 
+
+- Implementar niebla/nubes y que simulen movimiento de los aviones
+
+- Implementar Menu Principal (con que opciones?)
+
+- Implementar todo el sistema de audio
+	+ encontrar buenos sonidos
+	+ cortarlos para la duracion de la animacion
+	+ que se frene si la animacion termina antes de tiempo
+
+- Animacion:
+	+ Animar los modelos para que "entren en escena" (vuelen hacia la camara)
+	+ Animar la interfaz
+	+ Animar un menu principal, si es que esta implementado
