@@ -1,19 +1,29 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
-	public Canvas canvas;
 	public Transform[] Models;
 	
 	private Transform ActiveModel;
+	private UIManager managerUI;
+	private ObjectClicker objectClicker;
 
 	void Start () {
+
+		managerUI = GameObject.Find("Canvas").GetComponent<UIManager>();
+		objectClicker = FindObjectOfType<ObjectClicker>();
+
 		ActiveModel = Models[0];
 		ActiveModel.GetComponent<DisassembleObject>().Enable();
 	}
 	
+
 	void Update () {
+
+		if (Input.GetMouseButtonDown(0)) {
+			Transform objectClicked = objectClicker.ObtainObjectClicked(Input.mousePosition);
+			managerUI.UpdateInfoPanel(objectClicked);
+		}
 		
 		if (Input.GetKeyDown(KeyCode.P)) {
 			ActiveModel.GetComponent<DisassembleObject>().togglePause();
@@ -23,8 +33,8 @@ public class Manager : MonoBehaviour {
 			FindObjectOfType<CameraOrbit>().toggleAutoRotation();
 		}
 
-		if (Input.GetKeyDown(KeyCode.H)){
-			canvas.GetComponent<ManagerUI>().ToggleHelpMenu();
+		if (Input.GetKeyDown(KeyCode.H)) {
+			managerUI.ToggleHelpPanel();
 		}
 
 		if (Input.GetKeyDown(KeyCode.Space)) { 
@@ -49,9 +59,11 @@ public class Manager : MonoBehaviour {
 
 	}
 
+
 	private void setActive(Transform NewActiveModel){
-		
+
 		ActiveModel.GetComponent<DisassembleObject>().Disable();
+
 		ActiveModel = NewActiveModel;
 		ActiveModel.GetComponent<DisassembleObject>().Enable();		
 

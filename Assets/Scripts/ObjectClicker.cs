@@ -1,29 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObjectClicker : MonoBehaviour {
 
 	private RaycastHit hit;
 	private	Ray ray;
 
-	// Use this for initialization
-	void Start () {
+	/**
+	 * Based on a mouse click, return the first object found in the trajectory, if any.
+	 * 
+	 * @param {Vector3} mPos The position of the click.
+	 * @return {Transform} The clicked object. Null if no object was found in the click.
+	 */
+	public Transform ObtainObjectClicked (Vector3 mPos) {
+
+		ray = Camera.main.ScreenPointToRay(mPos);
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetMouseButtonDown(0)){
-			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			if(Physics.Raycast(ray, out hit, 100.0f)){
-				if(hit.transform != null){
-					
-					print(hit.transform.gameObject.name);
-					
-				}
-			}
-		}	
+		if (Physics.Raycast(ray, out hit, 100.0f)){
+
+			return hit.transform;
+
+		} else return null;
 	}
 
 }
