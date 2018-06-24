@@ -246,6 +246,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 135
       objectReference: {fileID: 0}
+    - target: {fileID: 2300172, guid: 3c276d1f9bec579468c6cf618ae57330, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c276d1f9bec579468c6cf618ae57330, type: 3}
   m_IsPrefabParent: 0
@@ -5397,6 +5401,14 @@ Prefab:
       propertyPath: m_Name
       value: F-15C_Eagle_fix_fix (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300086, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
+    - target: {fileID: 2300088, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
   m_IsPrefabParent: 0
@@ -5524,6 +5536,14 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -45
       objectReference: {fileID: 0}
+    - target: {fileID: 2300086, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
+    - target: {fileID: 2300088, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
   m_IsPrefabParent: 0
@@ -12020,6 +12040,14 @@ Prefab:
       propertyPath: m_Name
       value: F-15C_Eagle_fix_fix (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300086, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
+    - target: {fileID: 2300088, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b73a19630a7e074ca35d59c0e30b3d0, type: 3}
   m_IsPrefabParent: 0
