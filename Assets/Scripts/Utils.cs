@@ -10,12 +10,16 @@ public static class Utils{
 		GameObject aux;
 		MeshCollider mc;
 		foreach(Renderer r in array){
+			mc  = r.gameObject.GetComponent<MeshCollider>();
+			if(mc == null){
+				mc = r.gameObject.AddComponent<MeshCollider>() as MeshCollider;
+				mc.sharedMesh = r.gameObject.GetComponent<MeshFilter>().mesh;
+			}
 			aux = GameObject.Instantiate(r.gameObject, r.transform.parent, true);
 			aux.name = r.gameObject.name;
 			invertirNormales(aux);
 			mc = aux.GetComponent<MeshCollider>();
-			//if(mc != null)
-				mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
+			mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
 		}
 	}
 	
