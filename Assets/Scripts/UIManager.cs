@@ -1,54 +1,107 @@
-﻿using UnityEngine.UI;
+﻿using System.Collections;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
 public class UIManager : MonoBehaviour {
 
-	private GameObject helpPanel;
-	private GameObject infoPanel;
+ 	[Header("Game Objects Linking")]
+	public GameObject helpPanel;
+	public GameObject infoPanel;
+	[Space]
+	[Header("Information Panel")]
+	[Range(0f, 0.1f)]
+	public float typingTextSpeed = 0.017f;
+	[Range(0f, 0.2f)]
+	public float typingNumberSpeed = 0.13f;
+
+	private Animator helpPanelAnimator;
+	private Animator infoPanelAnimator;
+
+	private TextMeshProUGUI info_name;
+	private TextMeshProUGUI info_posCoordX;
+	private TextMeshProUGUI info_posCoordY;
+	private TextMeshProUGUI info_posCoordZ;
+	private TextMeshProUGUI info_rotCoordX;
+	private TextMeshProUGUI info_rotCoordY;
+	private TextMeshProUGUI info_rotCoordZ;
 
 	void Start () {
-	    helpPanel = GameObject.Find("Canvas/HelpPanel");
-	    helpPanel.SetActive(false);
+	    // helpPanel = GameObject.Find("Canvas/HelpPanel");
+	    // helpPanel.SetActive(false);
+	    helpPanelAnimator = helpPanel.GetComponent<Animator>();
+	    helpPanelAnimator.SetBool("isOpen", false);
 
-	    infoPanel = GameObject.Find("Canvas/MainInfoPanel");
-	    infoPanel.SetActive(false);
+	    // infoPanel = GameObject.Find("Canvas/MainInfoPanel");
+	    // infoPanel.SetActive(false);
+	    infoPanelAnimator = infoPanel.GetComponent<Animator>();
+	    infoPanelAnimator.SetBool("isOpen", false);
+
+	    info_name = GameObject.Find("Canvas/MainInfoPanel/NameTag").GetComponent<TextMeshProUGUI>();
+	    info_posCoordX = GameObject.Find("Canvas/MainInfoPanel/PositionCoordX").GetComponent<TextMeshProUGUI>();
+	    info_posCoordY = GameObject.Find("Canvas/MainInfoPanel/PositionCoordY").GetComponent<TextMeshProUGUI>();
+	    info_posCoordZ = GameObject.Find("Canvas/MainInfoPanel/PositionCoordZ").GetComponent<TextMeshProUGUI>();
+	    info_rotCoordX = GameObject.Find("Canvas/MainInfoPanel/RotationCoordX").GetComponent<TextMeshProUGUI>();
+	    info_rotCoordY = GameObject.Find("Canvas/MainInfoPanel/RotationCoordY").GetComponent<TextMeshProUGUI>();
+	    info_rotCoordZ = GameObject.Find("Canvas/MainInfoPanel/RotationCoordZ").GetComponent<TextMeshProUGUI>();
 	}
 
+
 	public void ToggleHelpPanel(){
-		helpPanel.SetActive(!helpPanel.activeSelf);
+		helpPanelAnimator.SetBool("isOpen", !helpPanelAnimator.GetBool("isOpen"));
+		// helpPanel.SetActive(!helpPanel.activeSelf);
 	}
 
 	public void ToggleInfoPanel(){
-		infoPanel.SetActive(!infoPanel.activeSelf);
+		infoPanelAnimator.SetBool("isOpen", !infoPanelAnimator.GetBool("isOpen"));
+		// infoPanel.SetActive(!infoPanel.activeSelf);
 	}
 
 	public void UpdateInfoPanel(Transform model){
 
 		if (model == null) {
-			infoPanel.SetActive(false);
+			infoPanelAnimator.SetBool("isOpen", false);
 
 		} else {
-			infoPanel.SetActive(true);
+			infoPanelAnimator.SetBool("isOpen", true);
+			StopAllCoroutines(); // in case the user clicks a new object before the previous one finished writing
 
-			TextMeshProUGUI name = GameObject.Find("Canvas/MainInfoPanel/NameTag").GetComponent<TextMeshProUGUI>();
-			name.text = model.name;
+			StartCoroutine(TypeSentence(info_name, model.name));
 
-			TextMeshProUGUI posCoordX = GameObject.Find("Canvas/MainInfoPanel/PositionCoordX").GetComponent<TextMeshProUGUI>();
-			posCoordX.text = model.position.x.ToString("#0.00");
-			TextMeshProUGUI posCoordY = GameObject.Find("Canvas/MainInfoPanel/PositionCoordY").GetComponent<TextMeshProUGUI>();
-			posCoordY.text = model.position.y.ToString("#0.00");
-			TextMeshProUGUI posCoordZ = GameObject.Find("Canvas/MainInfoPanel/PositionCoordZ").GetComponent<TextMeshProUGUI>();
-			posCoordZ.text = model.position.z.ToString("#0.00");
+			StartCoroutine(TypeNumber(info_posCoordX, model.position.x.ToString("#0.00")));
+			StartCoroutine(TypeNumber(info_posCoordY, model.position.y.ToString("#0.00")));
+			StartCoroutine(TypeNumber(info_posCoordZ, model.position.z.ToString("#0.00")));
 
-			TextMeshProUGUI rotCoordX = GameObject.Find("Canvas/MainInfoPanel/RotationCoordX").GetComponent<TextMeshProUGUI>();
-			rotCoordX.text = model.rotation.x.ToString("#0.00");
-			TextMeshProUGUI rotCoordY = GameObject.Find("Canvas/MainInfoPanel/RotationCoordY").GetComponent<TextMeshProUGUI>();
-			rotCoordY.text = model.rotation.y.ToString("#0.00");
-			TextMeshProUGUI rotCoordZ = GameObject.Find("Canvas/MainInfoPanel/RotationCoordZ").GetComponent<TextMeshProUGUI>();
-			rotCoordZ.text = model.rotation.z.ToString("#0.00");
+			StartCoroutine(TypeNumber(info_rotCoordX, model.rotation.x.ToString("#0.00")));
+			StartCoroutine(TypeNumber(info_rotCoordY, model.rotation.y.ToString("#0.00")));
+			StartCoroutine(TypeNumber(info_rotCoordZ, model.rotation.z.ToString("#0.00")));
 		}
 
+	}
+
+	// Animate the text by typing one letter at a time
+	IEnumerator TypeSentence (TextMeshProUGUI textfield, string newtext) {
+		textfield.text = "";
+
+		foreach (char letter in newtext.ToCharArray()) {
+			textfield.text += letter;
+			yield return new WaitForSeconds(typingTextSpeed);
+		}
+	}
+
+	// Animate the numbers by typing a few random ones before the real one
+	IEnumerator TypeNumber (TextMeshProUGUI textfield, string newtext) {
+		
+		// TODO random start-end time and random character generation
+		
+		textfield.text = "0.7";
+		yield return new WaitForSeconds(typingNumberSpeed);
+		textfield.text = "-1.19";
+		yield return new WaitForSeconds(typingNumberSpeed);
+		textfield.text = "88.69";
+		yield return new WaitForSeconds(typingNumberSpeed);
+
+		textfield.text = newtext;
 	}
 
 }

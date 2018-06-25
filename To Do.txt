@@ -58,6 +58,8 @@ __________________________________________
 	+ Escena: Un unico Jet parado en el piso con los botones al lado
 		+ Habria que buscar un hangar (yo no encontre) o buscar otro lugar donde ponerlo
 
+- Poner un FPS counter
+	+ Agregarle uso de RAM
 
 - Hacer la simulacion de Dia <-> Noche
 	+ Cambiar la luz directional para que rote de tal forma que simule el sol moviendose y que luego de un punto se "apage" y se haga de noche

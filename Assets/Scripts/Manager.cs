@@ -2,15 +2,13 @@
 
 public class Manager : MonoBehaviour {
 
+	public UIManager managerUI;
 	public Transform[] Models;
 	
 	private Transform ActiveModel;
-	private UIManager managerUI;
 	private ObjectClicker objectClicker;
 
 	void Start () {
-
-		managerUI = GameObject.Find("Canvas").GetComponent<UIManager>();
 		objectClicker = FindObjectOfType<ObjectClicker>();
 
 		ActiveModel = Models[0];
