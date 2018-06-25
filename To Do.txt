@@ -14,25 +14,44 @@ __________________________________________
 __________________________________________
 # To Do
 
+- Hacer que clickear sobre una pieza la seleccione de alguna forma visual.
+	+ que tenga el borde resaltado
+	+ que toda la pieza brille mas (y que "pulse/lata/parpadee")
+
+
+- Implementar por lo menos un shader por las dudas que nos pregunten eso. 
+Puede ser el del resaltado de piezas, o el de vidrio, creo que esos son los mas faciles
+
+
 - Ver si se puede arreglar el modelo del hercules
 	+ poner bien el origen
 	+ ver por que se desarman mal las turbinas todavia a pesar de que las separe (sera por el origen?)
 	
+
 - Arreglar la camara de orbita, es horrible de usar
+
 
 - Agregar luces en la alas del Hercules (azules) y quizas en la cola (violeta/rojo?)
 - Hacer que las luces de todos los aviones se enciendan en tiempos distintos entre si (pero al mismo tiempo si es el mismo objeto). Es decir, las alas de un unico Jet titilan juntas, pero en distinto tiempo que las de los otros Jets.
 
+
 - Implementar niebla/nubes de tal forma que parezca que los aviones estan avanzando.
 
+
 - Ponerle un sistema de particulas al Hercules que simule el paso de aire entre las turbinas (como los Jets tienen el fuego, este tiene que tener el aire)
+
 
 - Implementar todo el sistema de audio
 	+ encontrar buenos sonidos (dificil)
 	+ cortarlos para que encajen con la duracion de la animacion
 	+ verificar que se frena si la animacion termina antes de tiempo (por ej, pausas el desarme)
 
+
 - Animar los modelos para que "entren en escena" (vuelen hacia la camara)
+
+
+__________________________________________
+# Ideas extras
 
 - Implementar Menu Principal? Creo que es al pedo
 	+ Que botones habria ademas del Play? 
@@ -40,20 +59,10 @@ __________________________________________
 		+ Habria que buscar un hangar (yo no encontre) o buscar otro lugar donde ponerlo
 
 
-
-__________________________________________
-# Funciones basicas
-
-- Shaders: para el cuerpo del objeto y para el vidrio
-- sombras
-- Puesta en escena: skybox (cube map)
-- Interactividad: seleccion de piezas, se centra la camara y muestra informacion (position, nombre, etc.)
-__________________________________________
-# Ideas para expansion
-
-- Seleccion multiples modelos (tanque, avion, arma)
-- sistema particulas para simular el fuego del propulsor
-- Nubes (niebla)
-- simular el paso del tiempo (dia y noche)
-- lucecitas en la cola del avion (solo de noche?) luz en la cabina?
-- lens flare
+- Hacer la simulacion de Dia <-> Noche
+	+ Cambiar la luz directional para que rote de tal forma que simule el sol moviendose y que luego de un punto se "apage" y se haga de noche
+	+ Al estar de noche:
+		+ Agregar una luz tenue de la luna?
+		+ Agregar mas luces (en la cabina de los aviones?)
+		+ Cambiar el skybox a uno mas oscuro que de mejor la impresion de noche. 
+		Esta es la mejor pag que encontre de skybox, pero pueden ver si encuentran algo mejor: http://www.custommapmakers.org/skyboxes.php
