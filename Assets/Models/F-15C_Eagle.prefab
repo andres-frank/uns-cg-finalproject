@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 4981558240369896}
   - component: {fileID: 114077827736847234}
   m_Layer: 0
-  m_Name: F-15C_Eagle_fix_fix
+  m_Name: F-15C_Eagle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

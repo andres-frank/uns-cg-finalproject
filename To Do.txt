@@ -25,6 +25,8 @@ __________________________________________
 
 - Implementar niebla/nubes de tal forma que parezca que los aviones estan avanzando.
 
+- Ponerle un sistema de particulas al Hercules que simule el paso de aire entre las turbinas (como los Jets tienen el fuego, este tiene que tener el aire)
+
 - Implementar todo el sistema de audio
 	+ encontrar buenos sonidos (dificil)
 	+ cortarlos para que encajen con la duracion de la animacion
