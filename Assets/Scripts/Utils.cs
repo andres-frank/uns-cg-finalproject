@@ -9,9 +9,16 @@ public static class Utils{
 		Renderer[] array = obj.gameObject.GetComponentsInChildren<Renderer>();
 		GameObject aux;
 		MeshCollider mc;
+		MeshFilter mf;
 		foreach(Renderer r in array){
-			mc  = r.gameObject.GetComponent<MeshCollider>();
-			if(mc != null){
+			mf = r.gameObject.GetComponent<MeshFilter>();
+			//Si no tiene MeshFIlter no se puede invertir las normales.
+			if(mf != null){
+				mc  = r.gameObject.GetComponent<MeshCollider>();
+				if(mc == null){
+					mc = r.gameObject.AddComponent<MeshCollider>() as MeshCollider;
+					mc.sharedMesh = mf.mesh;
+				}
 				aux = GameObject.Instantiate(r.gameObject, r.transform.parent, true);
 				aux.name = r.gameObject.name;
 				invertirNormales(aux);
@@ -19,21 +26,6 @@ public static class Utils{
 				mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
 			}
 		}
-
-		/* Te dejo aca tal cual lo que tenias antes gabi:
-		foreach(Renderer r in array){
-			mc  = r.gameObject.GetComponent<MeshCollider>();
-			if(mc == null){
-				mc = r.gameObject.AddComponent<MeshCollider>() as MeshCollider;
-				mc.sharedMesh = r.gameObject.GetComponent<MeshFilter>().mesh;
-			}
-			aux = GameObject.Instantiate(r.gameObject, r.transform.parent, true);
-			aux.name = r.gameObject.name;
-			invertirNormales(aux);
-			mc = aux.GetComponent<MeshCollider>();
-			mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
-		}
-		*/
 	}
 	
 	public static void invertirNormales(GameObject obj){
