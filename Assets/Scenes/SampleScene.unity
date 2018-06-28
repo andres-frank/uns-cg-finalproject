@@ -8519,8 +8519,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.49, y: -21.21}
-  m_SizeDelta: {x: 432.73, y: 261.01}
+  m_AnchoredPosition: {x: 24.49, y: -18.9}
+  m_SizeDelta: {x: 432.7, y: 263.3}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &757944395
 MonoBehaviour:
@@ -8542,9 +8542,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "<b>Space</b> \tArm/Disarm selected model\n<b>P</b>\t\tPause/Resume animation\n<b>R</b>\t\tEnable/Disable
-    camera rotation\n<b>H</b>\t\tShow/Hide this help\n<b>F</b>\t\tShow/Hide FPS counter\n\n<b>1</b>\t\tSelect
-    model 1\n<b>2</b>\t\tSelect model 2\n<b>3</b>\t\tSelect model 3\n<b>4</b>\t\tSelect
-    model 4\n\n"
+    camera rotation\n<b>H</b>\t\tShow/Hide this help\n\n<b>1</b>\t\tSelect model 1\n<b>2</b>\t\tSelect
+    model 2\n<b>3</b>\t\tSelect model 3\n<b>4</b>\t\tSelect model 4\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bab6d38e247b94948890ebbc8c7af85e, type: 2}
   m_sharedMaterial: {fileID: 21569002037373350, guid: bab6d38e247b94948890ebbc8c7af85e,
@@ -8590,7 +8589,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 196
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -8610,15 +8609,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 18.826752, z: 0, w: 0}
+  m_margin: {x: 0, y: -0.723053, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 757944395}
-    characterCount: 215
+    characterCount: 190
     spriteCount: 0
-    spaceCount: 46
-    wordCount: 40
+    spaceCount: 41
+    wordCount: 35
     linkCount: 0
-    lineCount: 11
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -11057,7 +11056,7 @@ MonoBehaviour:
   helpPanel: {fileID: 1104850723}
   infoPanel: {fileID: 2115210426}
   typingTextSpeed: 0.017
-  typingNumberSpeed: 0.13
+  typingNumberSpeed: 0.03
 --- !u!4 &940201897
 Transform:
   m_ObjectHideFlags: 0
@@ -13479,8 +13478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -140, y: 99.6}
-  m_SizeDelta: {x: 476.38, y: 296.79}
+  m_AnchoredPosition: {x: -140, y: 100.7}
+  m_SizeDelta: {x: 476.4, y: 277.2}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1104850725
 MonoBehaviour:

@@ -8,12 +8,16 @@ public class UIManager : MonoBehaviour {
  	[Header("Game Objects Linking")]
 	public GameObject helpPanel;
 	public GameObject infoPanel;
+
 	[Space]
+
 	[Header("Information Panel")]
+
 	[Range(0f, 0.1f)]
 	public float typingTextSpeed = 0.017f;
+
 	[Range(0f, 0.2f)]
-	public float typingNumberSpeed = 0.13f;
+	public float typingNumberSpeed = 0.03f;
 
 	private Animator helpPanelAnimator;
 	private Animator infoPanelAnimator;
@@ -94,12 +98,12 @@ public class UIManager : MonoBehaviour {
 		
 		// TODO random start-end time and random character generation
 		
-		textfield.text = "0.7";
-		yield return new WaitForSeconds(typingNumberSpeed);
-		textfield.text = "-1.19";
-		yield return new WaitForSeconds(typingNumberSpeed);
-		textfield.text = "88.69";
-		yield return new WaitForSeconds(typingNumberSpeed);
+		textfield.text = Random.Range(-100.0f, 100.0f).ToString("#0.00");
+		yield return new WaitForSeconds(typingNumberSpeed + Random.Range(0.0f, 0.15f));
+		textfield.text = Random.Range(-100.0f, 100.0f).ToString("#0.00");
+		yield return new WaitForSeconds(typingNumberSpeed + Random.Range(0.0f, 0.15f));
+		textfield.text = Random.Range(-100.0f, 100.0f).ToString("#0.00");
+		yield return new WaitForSeconds(typingNumberSpeed + Random.Range(0.0f, 0.15f));
 
 		textfield.text = newtext;
 	}
