@@ -3,14 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DisassembleObject : MonoBehaviour {
-	/*
-	FEATURES
-		Buttons:	    Action:
-		 P:			 	 Start/Pause movement
-		 Space:    		 Assemble/Disassemble mode
-	*/
 
-	// Use this for initialization
 	public float velocity = 0.01f; 
 	public float separationFactor = 2;
 
@@ -25,7 +18,7 @@ public class DisassembleObject : MonoBehaviour {
 	private bool armar = true;
 	private static bool pause = false;
 
-	public bool isEnabled = false;
+	private bool isEnabled = false;
 
 	void Start () {
 		// Cada sub objeto se desplaza desde su posIni hasta una posFin con un determinado paso.
@@ -44,6 +37,10 @@ public class DisassembleObject : MonoBehaviour {
 		Renderer[] array = this.gameObject.GetComponentsInChildren<Renderer>(); 
 		
 		foreach(Renderer r in array){
+			
+			// el sistema de particulas no requiere ajuste de posicion porque esta anidado a un objeto
+			if ( r.GetComponent<ParticleSystem>() != null) continue;
+			
 			objectMovementData omd = new objectMovementData();
 			omd.t = r.GetComponent<Transform>();
 			omd.posIni = omd.t.position;
@@ -69,9 +66,8 @@ public class DisassembleObject : MonoBehaviour {
 
 		if (!isEnabled) return;
 
-		// if(Input.GetKeyDown(KeyCode.R)){ pause = !pause; }
 		if(!pause){
-			// if(Input.GetKeyDown(KeyCode.Space)){ armar = !armar; }
+
 			foreach(objectMovementData omd in listaObjetos){
 				if(armar){
 					if(Vector3.Magnitude(omd.posFin-omd.t.position) < omd.distancia){

@@ -11,6 +11,8 @@ public static class Utils{
 		MeshCollider mc;
 		MeshFilter mf;
 		foreach(Renderer r in array){
+			if ( r.GetComponent<ParticleSystem>() != null) continue; // we don't want to duplicate particle systems
+
 			mf = r.gameObject.GetComponent<MeshFilter>();
 			//Si no tiene MeshFIlter no se puede invertir las normales.
 			if(mf != null){
