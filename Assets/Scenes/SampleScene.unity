@@ -2607,14 +2607,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 217483107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.19385932, y: -0.22875887, z: 0.046541505, w: 0.9528493}
   m_LocalPosition: {x: 0.39682245, y: 2.0386717, z: -0.889133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 282840814}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23, y: -27, z: 0}
 --- !u!114 &217483109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20044,6 +20044,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0.01
   separationFactor: 2
+--- !u!95 &1570998140
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1570998137}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dde1eb58746094418c7065a2c649270, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1579571008
 GameObject:
   m_ObjectHideFlags: 0
