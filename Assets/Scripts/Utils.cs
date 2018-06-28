@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Utils{
+
 	public static void TwoSideSurface(GameObject obj) {
 		//Duplica cada Mesh de 'obj' e invierte sus normales.
 		//Como resultado todas las Meshes son visibles de ambos lados (por dentro y por fuera).
+		
 		Renderer[] array = obj.gameObject.GetComponentsInChildren<Renderer>();
 		GameObject aux;
 		MeshCollider mc;
 		MeshFilter mf;
+
 		foreach(Renderer r in array){
 			if ( r.GetComponent<ParticleSystem>() != null) continue; // we don't want to duplicate particle systems
-
+			
 			mf = r.gameObject.GetComponent<MeshFilter>();
 			//Si no tiene MeshFIlter no se puede invertir las normales.
 			if(mf != null){
@@ -23,6 +26,23 @@ public static class Utils{
 				}
 				aux = GameObject.Instantiate(r.gameObject, r.transform.parent, true);
 				aux.name = r.gameObject.name;
+				
+
+				// ---- NO TOCAR ESTO ----
+				// es un tremendo hack asqueroso porque es la unica forma que encontre de hacer andar la luces despues de 3 horas debuggeando, literal
+				if (aux.name == "Body_Under_2_004" || aux.name == "Body_Under_2_005" || aux.name == "right_wing_part_1" || aux.name == "Left_wing_1_1") {
+					Light[] lights = aux.GetComponentsInChildren<Light>();
+					foreach (Light l in lights) {
+						l.enabled=false;
+						// Debug.Log("acabo de cambiar a " + l.enabled + " el componente Light de " + aux);
+					}
+					BlinkingLight[] blights = aux.GetComponentsInChildren<BlinkingLight>();
+					foreach (BlinkingLight bl in blights) {
+						bl.enabled=false;
+						// Debug.Log("acabo de cambiar a " + bl.enabled + " el componente BlinkingLight de " + aux);
+					}
+				}
+
 				invertirNormales(aux);
 				mc = aux.GetComponent<MeshCollider>();
 				mc.sharedMesh = aux.GetComponent<MeshFilter>().mesh;
@@ -31,6 +51,7 @@ public static class Utils{
 	}
 	
 	public static void invertirNormales(GameObject obj){
+		
 		//Invierte las normales de 'obj' y tambien el sentido de recorrido de cada triangulo.
 		MeshFilter filter = obj.GetComponent(typeof (MeshFilter)) as MeshFilter;
 		if (filter != null)

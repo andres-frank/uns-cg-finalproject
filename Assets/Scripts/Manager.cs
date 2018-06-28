@@ -65,6 +65,8 @@ public class Manager : MonoBehaviour {
 		ActiveModel = NewActiveModel;
 		ActiveModel.GetComponent<DisassembleObject>().Enable();		
 
-		FindObjectOfType<Transition>().setNewPos(ActiveModel.position);
+		// The Hercules Model has its origin broken, and we couldn't fix it in Blender... so this is a hardcoded hack just so it looks good. 
+		if (ActiveModel == Models[3]) FindObjectOfType<Transition>().setNewPos(new Vector3(-8, -13, 6)); 
+		else FindObjectOfType<Transition>().setNewPos(ActiveModel.position);
 	}
 }

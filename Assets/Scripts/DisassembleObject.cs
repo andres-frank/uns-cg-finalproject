@@ -40,7 +40,7 @@ public class DisassembleObject : MonoBehaviour {
 			
 			// el sistema de particulas no requiere ajuste de posicion porque esta anidado a un objeto
 			if ( r.GetComponent<ParticleSystem>() != null) continue;
-			
+
 			objectMovementData omd = new objectMovementData();
 			omd.t = r.GetComponent<Transform>();
 			omd.posIni = omd.t.position;
