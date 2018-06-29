@@ -57,6 +57,9 @@ public class Manager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha4)) {
 			this.setActive(Models[3]);
 		}
+		if(Input.GetKeyDown(KeyCode.C)){
+			
+		}
 
 	}
 
