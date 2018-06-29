@@ -9,7 +9,6 @@ public class GlowObject : MonoBehaviour{
 	}
 
 	private Color _currentColor;
-	private Color _targetColor;
 	private Material[] materials = null;
 
 	public void StartGlowing(Transform t){
@@ -18,7 +17,6 @@ public class GlowObject : MonoBehaviour{
 				StopGlowing();
 			}
 			materials = t.GetComponent<Renderer>().materials;
-			_targetColor = GlowColor;
 			enabled = true;
 		}
 	}
@@ -31,13 +29,13 @@ public class GlowObject : MonoBehaviour{
 
 	void Update(){
 		if(materials != null){
-			_currentColor = Color.Lerp(_currentColor, _targetColor, Time.deltaTime * LerpFactor);
+			_currentColor = Color.Lerp(_currentColor, GlowColor, Time.deltaTime * LerpFactor);
 
 			for (int i = 0; i < materials.Length; i++){
 				materials[i].SetColor("_GlowColor", _currentColor);
 			}
 
-			if (_currentColor.Equals(_targetColor)){
+			if (_currentColor.Equals(GlowColor)){
 				enabled = false;
 			}
 		}
