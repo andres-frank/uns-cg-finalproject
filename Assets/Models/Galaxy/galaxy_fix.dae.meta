@@ -1639,12 +1639,107 @@ ModelImporter:
     6400506: wheels_8
     6400508: wing_left_3
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engines
+    second: {fileID: 2100000, guid: 4f486557f5ec1a94e85056a569c8e8f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_001
+    second: {fileID: 2100000, guid: 31188ee3ad7af4f4d986437b9fd78cff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tail_Fin
+    second: {fileID: 2100000, guid: ab68620b884af6a4c812905d8e9b003e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wing_Left
+    second: {fileID: 2100000, guid: 1a672cfe25ac73e439d2891c82ef4ba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wing_Left_Bottom
+    second: {fileID: 2100000, guid: ac7ca2b837dd78447ba608258d47f0c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wing_Right
+    second: {fileID: 2100000, guid: 0406cbf8b93243246abe6cc7a1fb9800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_middle
+    second: {fileID: 2100000, guid: c247d2fcac7c95341bd12d7db706addf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_rear
+    second: {fileID: 2100000, guid: b2f62b3150c27b74a8cdb4bae885fe5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_top
+    second: {fileID: 2100000, guid: 815f37a1c47994e45bbe77db30354ece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_top_profile
+    second: {fileID: 2100000, guid: e36e40e6f01feee4ea259e3456358dbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fin_blades
+    second: {fileID: 2100000, guid: 0e2701a9140f43e4986e55f153120c3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: front
+    second: {fileID: 2100000, guid: a91a87dcacdd4a0408e831bac37e30d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: f73e8d97698c92d48a165514fd0beaa1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interior_1
+    second: {fileID: 2100000, guid: afee430bd9f8d7d4382c371fab4c3d55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interior_2
+    second: {fileID: 2100000, guid: ac43b205d35ad1e45994169d723a1738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interior_3
+    second: {fileID: 2100000, guid: cbdf5361fa2b6a64cb1dbad0af12ab74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: landing_gear
+    second: {fileID: 2100000, guid: 6d8fa0c4cb74ac648a45756b051593ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rear_grill
+    second: {fileID: 2100000, guid: b71aeeb1faaa92c409c16b4f6a500b54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wing_right_top
+    second: {fileID: 2100000, guid: e410f56842a82d14bac9fed1d5f65128, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -1693,7 +1788,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

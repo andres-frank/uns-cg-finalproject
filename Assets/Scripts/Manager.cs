@@ -7,9 +7,11 @@ public class Manager : MonoBehaviour {
 	
 	private Transform ActiveModel;
 	private ObjectClicker objectClicker;
+	private GlowObject glowObject;
 
 	void Start () {
 		objectClicker = FindObjectOfType<ObjectClicker>();
+		glowObject = FindObjectOfType<GlowObject>();
 
 		ActiveModel = Models[0];
 		ActiveModel.GetComponent<DisassembleObject>().Enable();
@@ -21,6 +23,7 @@ public class Manager : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)) {
 			Transform objectClicked = objectClicker.ObtainObjectClicked(Input.mousePosition);
 			managerUI.UpdateInfoPanel(objectClicked);
+			glowObject.StartGlowing(objectClicked);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.P)) {
