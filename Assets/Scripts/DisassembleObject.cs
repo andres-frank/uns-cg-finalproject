@@ -92,6 +92,7 @@ public class DisassembleObject : MonoBehaviour {
 	}
 
 	public void toggleArmar(){
+		FindObjectOfType<AudioManager>().Play("Dissasemble");
 		armar = !armar;
 	}
 
