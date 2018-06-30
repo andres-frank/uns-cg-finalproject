@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class Manager : MonoBehaviour {
 
@@ -58,7 +59,12 @@ public class Manager : MonoBehaviour {
 			this.setActive(Models[3]);
 		}
 		if(Input.GetKeyDown(KeyCode.C)){
-			
+			Renderer r = GameObject.Find("Clouds").GetComponent<Renderer>();
+			r.enabled = !r.enabled;
+		}
+		if(Input.GetKeyDown(KeyCode.V)){
+			PostProcessingBehaviour p = FindObjectOfType<PostProcessingBehaviour>();
+			p.enabled = !p.enabled;
 		}
 
 	}
