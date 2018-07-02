@@ -4,6 +4,7 @@ using UnityEngine.PostProcessing;
 public class Manager : MonoBehaviour {
 
 	public UIManager managerUI;
+	public AudioManager managerAudio;
 	public Transform[] Models;
 	
 	private Transform ActiveModel;
@@ -39,6 +40,10 @@ public class Manager : MonoBehaviour {
 			managerUI.ToggleHelpPanel();
 		}
 
+		if (Input.GetKeyDown(KeyCode.M)) {
+			managerAudio.ToggleMute();
+		}
+		
 		if (Input.GetKeyDown(KeyCode.Space)) { 
 			ActiveModel.GetComponent<DisassembleObject>().toggleArmar();
 		}

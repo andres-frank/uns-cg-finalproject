@@ -1,8 +1,8 @@
 ## Unity Project
 
-This project was performed on ![Unity](https://unity3d.com/get-unity/download) version 2018.1.1f1.
+This project was performed on [Unity](https://unity3d.com/get-unity/download) version 2018.1.1f1.
 
-We used the plugin ![GitHub for Unity](https://unity.github.com/) version 1.0.0rc4 Beta.
+We used the plugin [GitHub for Unity](https://unity.github.com/) version 1.0.0rc4 Beta.
 
 ---
 ### How to open

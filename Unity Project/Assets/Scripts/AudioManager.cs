@@ -1,3 +1,5 @@
+// Original source code by Brackeys https://www.youtube.com/watch?v=6OT43pvUyfY
+
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
@@ -11,10 +13,6 @@ public class AudioManager : MonoBehaviour
 
 	public Sound[] sounds;
 
-	void Start(){
-		Play("Ambient");
-	}
-	
 	void Awake()
 	{
 		if (instance != null)
@@ -37,6 +35,10 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
+	void Start(){
+		Play("Ambient");
+	}
+	
 	public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
@@ -50,6 +52,11 @@ public class AudioManager : MonoBehaviour
 		//s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
+	}
+
+	public void ToggleMute() {
+		foreach (Sound s in sounds) 
+			s.source.mute = !s.source.mute;
 	}
 
 }
