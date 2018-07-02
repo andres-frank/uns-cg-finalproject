@@ -8,7 +8,8 @@ We used the plugin [GitHub for Unity](https://unity.github.com/) version 1.0.0rc
 ### How to open
 
 Simply run Unity, choose 'Open..' and in the dialog select this folder (the one named 'Unity Project').
-After Unity compiles all scripts and opens up, navigate to the Scenes folder and open the MainScene.
+
+After Unity compiles all scripts and opens up, navigate to the 'Scenes' folder in the project view and open 'MainScene'.
 
 ---
 ### Shader Error on startup

@@ -27,13 +27,13 @@ Model disassembly, implemented in Unity.
 * Piece selection via clicking with shader highlighting for feedback.
 * Ambient and action sounds.
 
-<p align="center"><img src="repoassets/F15_spin.gif" alt="F15 Spin Gif" width="455" height="320"><img src="repoassets/F15_disarm.gif" alt="F15 Spin Gif" width="455" height="320"></p>
+<p align="center"><img src="repoassets/F15_spin.gif" alt="F15 Spin Gif" width="445" height="310"><img src="repoassets/F15_disarm.gif" alt="F15 Spin Gif" width="445" height="310"></p>
 
 ### Sources and Acknowledgements
 * Big thanks to <a href="https://free3d.com/user/jasonowen">Jason Ohonowskyj</a> for his great models.
 * Skybox by <a href="http://www.custommapmakers.org/skyboxes.php">Custom Map Makers</a>.
 * <a href="https://www.youtube.com/user/Brackeys">Brackey's YouTube channel</a> for high quality Unity tutorials.
-
+* Object highlighting by the great Dan Moran ([YouTube](https://www.youtube.com/watch?v=SMLbbi8oaO8) | [GitHub](https://github.com/Broxxar/GlowingObjectOutlines))
 
 <br>
 <br>
