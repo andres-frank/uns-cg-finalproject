@@ -27,7 +27,7 @@ Model disassembly, implemented in Unity.
 * Piece selection via clicking with shader highlighting for feedback.
 * Ambient and action sounds.
 
-<p align="center"><img src="repoassets/F15_spin.gif" alt="F15 Spin Gif" width="445" height="310"><img src="repoassets/F15_disarm.gif" alt="F15 Spin Gif" width="445" height="310"></p>
+<p align="center"><img src="repoassets/F15_spin.gif" alt="F15 Spin Gif" width="435" height="310"><img src="repoassets/F15_disarm.gif" alt="F15 Spin Gif" width="435" height="310"></p>
 
 ### Sources and Acknowledgements
 * Big thanks to <a href="https://free3d.com/user/jasonowen">Jason Ohonowskyj</a> for his great models.
